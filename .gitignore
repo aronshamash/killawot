@@ -21,5 +21,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+.DS_Store
 
 # Lock files are fine to commit (pnpm-lock.yaml)
