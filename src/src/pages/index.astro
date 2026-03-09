@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    title: 'AI Automation',
+    description: 'Streamline operations with intelligent workflow automation, LLM integration, and custom agent systems that reduce manual effort and accelerate delivery.',
+    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 2.47a2.25 2.25 0 01-1.591.659H9.061a2.25 2.25 0 01-1.591-.659L5 14.5m14 0V5.846a2.25 2.25 0 00-1.36-2.068l-1.39-.58M5 14.5V5.846a2.25 2.25 0 011.36-2.068l1.39-.58" /></svg>',
+  },
+  {
+    title: 'AI Audits',
+    description: 'Evaluate your AI readiness, review existing implementations for effectiveness and risk, and get a clear roadmap to intelligent operations.',
+    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
+  },
+  {
+    title: 'Full-Stack Development',
+    description: 'Production-grade applications built with Node.js, React, and cloud-native architecture. Over 20 years of experience with major global brands.',
+    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>',
+  },
+  {
+    title: 'Cloud Architecture',
+    description: 'Scalable infrastructure on AWS. From serverless functions to distributed systems, designed for reliability and cost efficiency.',
+    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>',
+  },
+];
+
+const clients = [
+  { name: 'Collinson Group', logo: '/images/clients/collinson-group.jpg' },
+  { name: 'BBC iPlayer', logo: '/images/clients/iplayer.jpg' },
+  { name: 'The Times', logo: '/images/clients/thetimes.png' },
+];
+---
+
+<BaseLayout title="Killawot — Engineering Intelligent Systems">
+  <!-- Hero -->
+  <section class="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950" />
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl" />
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6 text-center">
+      <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-6">
+        AI Automation &amp; Consultancy
+      </p>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        Engineering<br />
+        <span class="bg-gradient-to-r from-accent to-cyan-400 bg-clip-text text-transparent">
+          Intelligent Systems
+        </span>
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        We help businesses harness AI automation to streamline operations,
+        reduce costs, and build competitive advantage. Over 20 years of
+        engineering experience with global brands.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold rounded-xl transition-colors"
+        >
+          Book a free consultation
+        </a>
+        <a
+          href="/services"
+          class="inline-flex items-center justify-center px-8 py-3.5 border border-white/10 text-white hover:border-accent/50 rounded-xl transition-colors"
+        >
+          Our services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-24 bg-navy-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">What we do</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Services</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {services.map((service) => (
+          <ServiceCard {...service} />
+        ))}
+      </div>
+      <div class="text-center mt-12">
+        <a href="/services" class="text-accent hover:text-accent-light text-sm font-medium transition-colors">
+          View all services &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="py-24 bg-navy-900/30">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-300 text-base font-semibold uppercase tracking-widest mb-10">Trusted by leading brands</p>
+      <div class="flex flex-wrap items-center justify-center gap-12">
+        {clients.map((client) => (
+          <img
+            src={client.logo}
+            alt={client.name}
+            class="h-40"
+            loading="lazy"
+          />
+        ))}
+      </div>
+      <div class="mt-10">
+        <a href="/work" class="text-accent hover:text-accent-light text-sm font-medium transition-colors">
+          See our work &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-navy-950">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Ready to automate intelligently?
+      </h2>
+      <p class="text-gray-400 text-lg mb-10">
+        Whether you need an AI readiness audit, workflow automation, or a full-stack build,
+        we'll help you move fast with confidence.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold rounded-xl transition-colors"
+      >
+        Get in touch
+      </a>
+    </div>
+  </section>
+</BaseLayout>

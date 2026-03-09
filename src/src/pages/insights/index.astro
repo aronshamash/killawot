@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('insights')).sort(
+  (postA, postB) => new Date(postB.data.date).getTime() - new Date(postA.data.date).getTime()
+);
+---
+
+<BaseLayout title="Insights — Killawot">
+  <section class="pt-32 pb-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">Knowledge sharing</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Insights</h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Practical perspectives on AI automation, engineering best practices, and building intelligent systems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            date={new Date(post.data.date).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+            slug={post.id}
+          />
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-center text-gray-500">No posts yet. Check back soon.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

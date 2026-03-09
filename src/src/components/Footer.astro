@@ -1,0 +1,43 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 bg-navy-950">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <img src="/killawot-condensed.svg" alt="Killawot" class="h-8 mb-4" />
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Engineering intelligent systems.<br />
+          AI automation consultancy &amp; full-stack development.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Navigation</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+          <li><a href="/work" class="hover:text-accent transition-colors">Work</a></li>
+          <li><a href="/insights" class="hover:text-accent transition-colors">Insights</a></li>
+          <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Get in touch</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>
+            <a href="mailto:info@killawot.com" class="hover:text-accent transition-colors">
+              info@killawot.com
+            </a>
+          </li>
+          <li>+44 (0)7947 408 351</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-white/5 text-center text-xs text-gray-500">
+      &copy; {year} Killawot Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>

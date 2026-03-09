@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ClientCard from '../components/ClientCard.astro';
+
+const projects = [
+  {
+    name: 'Collinson Group',
+    image: '/images/clients/collinson-group.jpg',
+    description: 'Platform modernisation for the group behind Priority Pass — the world\'s largest airport lounge network. Automated infrastructure and delivery pipelines, enabling faster releases and improved platform reliability.',
+  },
+  {
+    name: 'Superdry',
+    image: '/images/clients/superdry.png',
+    description: 'Re-platforming and new feature development for the global fashion brand. Full-stack engineering across their e-commerce platform.',
+  },
+  {
+    name: 'The Times Newspaper',
+    image: '/images/clients/thetimes.png',
+    description: 'Software development expertise for one of the world\'s most recognised news publications. Building and maintaining digital publishing tools.',
+  },
+  {
+    name: 'BBC iPlayer',
+    image: '/images/clients/iplayer.jpg',
+    description: 'Engineering for BBC iPlayer — the UK\'s leading streaming platform. Building high-scale, resilient services powering millions of daily viewers.',
+  },
+  {
+    name: 'Rebecca Shamash',
+    image: '/images/clients/rebecca.png',
+    description: 'Design and build of a professional website for a psychotherapist practice in Bristol. Clean, accessible, and optimised for local search.',
+  },
+];
+---
+
+<BaseLayout title="Work — Killawot">
+  <section class="pt-32 pb-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">Our portfolio</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Work</h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Selected projects from over 20 years of engineering for global brands and growing businesses.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <ClientCard {...project} />
+        ))}
+      </div>
+
+      <div class="text-center mt-16">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold rounded-xl transition-colors"
+        >
+          Start a project
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
