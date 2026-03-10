@@ -121,12 +121,12 @@ const clients = [
   <section class="py-24 bg-navy-900/30">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <p class="text-gray-300 text-base font-semibold uppercase tracking-widest mb-10">Trusted by leading brands</p>
-      <div class="flex flex-wrap items-center justify-center gap-12">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {clients.map((client) => (
           <img
             src={client.logo}
             alt={client.name}
-            class="h-40"
+            class="w-full object-contain h-40"
             loading="lazy"
           />
         ))}
