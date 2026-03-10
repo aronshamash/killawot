@@ -3,34 +3,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const services = [
   {
-    title: 'AI Automation Consulting',
-    description: 'Transform manual, repetitive processes into intelligent automated workflows. We design and implement AI-powered systems that integrate with your existing tools and scale with your business.',
+    title: 'Agent & Automation Systems',
+    description: 'We build agents, pipelines, and LLM-integrated workflows that cut manual effort and accelerate delivery. Designed around your stack — not a generic layer dropped on top.',
     deliverables: [
-      'Workflow analysis and automation roadmap',
-      'LLM integration and prompt engineering',
-      'Custom AI agent development',
-      'Process orchestration and monitoring',
-      'Team training and knowledge transfer',
+      'Workflow analysis and automation opportunity mapping',
+      'LLM integration, prompt engineering, and RAG pipelines',
+      'Custom agent development (single-agent and multi-agent)',
+      'Orchestration, error handling, and observability',
+      'Handover documentation and team enablement',
     ],
-    audience: 'Operations teams, CTOs, and business leaders looking to reduce manual overhead and accelerate delivery.',
+    audience: 'Engineering and operations leaders eliminating manual bottlenecks without adding headcount.',
     icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 2.47a2.25 2.25 0 01-1.591.659H9.061a2.25 2.25 0 01-1.591-.659L5 14.5m14 0V5.846a2.25 2.25 0 00-1.36-2.068l-1.39-.58M5 14.5V5.846a2.25 2.25 0 011.36-2.068l1.39-.58" /></svg>',
   },
   {
     title: 'AI Audits & Readiness Assessment',
-    description: 'Not sure where AI fits in your organisation? We assess your current operations, data maturity, and technical infrastructure to build a prioritised, actionable AI strategy.',
+    description: 'We assess your data maturity, existing AI implementations, and infrastructure — then tell you honestly what\'s working, what\'s not, and what to build first.',
     deliverables: [
-      'AI readiness maturity assessment',
-      'Current implementation review and risk analysis',
+      'Maturity assessment across data, tooling, and team capability',
+      'Risk review of existing AI implementations',
       'Data quality and pipeline evaluation',
-      'Prioritised opportunity identification',
-      'Executive-ready report with ROI projections',
+      'Prioritised opportunity map with effort vs. impact scoring',
+      'Exec-ready report with ROI projections and build roadmap',
     ],
-    audience: 'Executives and technology leaders evaluating AI adoption, or organisations with existing AI that needs review.',
+    audience: 'Leaders making AI investment decisions, or teams inheriting AI they didn\'t build.',
     icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
   },
   {
     title: 'Full-Stack Development',
-    description: 'Production-grade web applications and APIs. Specialising in Node.js, React, React Native, GraphQL, and cloud-native architectures. Over 20 years of experience with major global brands.',
+    description: 'Production-grade applications and APIs built by engineers with 20+ years experience across major global brands. React, Node.js, GraphQL, React Native — end to end.',
     deliverables: [
       'Web application development (React, Next.js, Astro)',
       'API design and implementation (GraphQL, REST)',
@@ -38,20 +38,20 @@ const services = [
       'Database design and optimisation (MongoDB, PostgreSQL)',
       'Performance auditing and optimisation',
     ],
-    audience: 'Product teams needing senior engineering capability, startups building MVPs, or enterprises modernising legacy systems.',
+    audience: 'Product teams that need senior delivery without the overhead of a large agency.',
     icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>',
   },
   {
     title: 'Cloud Architecture & Infrastructure',
-    description: 'Scalable, cost-efficient infrastructure on AWS. From serverless microservices to event-driven distributed systems, designed for reliability and operational excellence.',
+    description: 'AWS architecture designed for scale and operational simplicity — from serverless and containers to event-driven distributed systems. Built to last, not just to launch.',
     deliverables: [
       'AWS architecture design and implementation',
       'Serverless and container-based deployments',
       'CI/CD pipeline setup and optimisation',
       'Infrastructure as Code (Terraform, CDK)',
-      'Cost optimisation and monitoring',
+      'Cost analysis, right-sizing, and observability setup',
     ],
-    audience: 'Engineering teams scaling infrastructure, or businesses migrating to the cloud.',
+    audience: 'Engineering teams scaling past their current infrastructure, or moving workloads to the cloud.',
     icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>',
   },
 ];
@@ -64,8 +64,8 @@ const services = [
         <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">What we offer</p>
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Services</h1>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-          From AI strategy to production deployment. We bring deep engineering
-          expertise to every engagement.
+          We design, build, and ship — across AI systems, full-stack applications,
+          and cloud infrastructure. Senior engineers, every engagement.
         </p>
       </div>
 

@@ -9,7 +9,7 @@ const { title, description, icon } = Astro.props;
 ---
 
 <div class="group relative bg-navy-800/50 border border-white/5 rounded-2xl p-8 hover:border-accent/30 transition-all duration-300">
-  <div class="text-4xl mb-4" set:html={icon} />
+  <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 mb-5" set:html={icon} />
   <h3 class="text-white text-xl font-semibold mb-3">{title}</h3>
   <p class="text-gray-400 text-sm leading-relaxed">{description}</p>
   <div class="absolute inset-0 rounded-2xl bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
