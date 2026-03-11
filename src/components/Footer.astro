@@ -36,8 +36,9 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
-    <div class="mt-12 pt-6 border-t border-white/5 text-center text-xs text-gray-500">
-      &copy; {year} Killawot Ltd. All rights reserved.
+    <div class="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+      <span>&copy; {year} Killawot Ltd. All rights reserved.</span>
+      <a href="/privacy" class="hover:text-accent transition-colors">Privacy Policy</a>
     </div>
   </div>
 </footer>

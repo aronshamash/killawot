@@ -1,0 +1,78 @@
+---
+const GA_ID = 'G-W55THS4HRH';
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden border-t border-navy-700 bg-navy-950 px-6 py-4"
+>
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-sm text-slate-300">
+      We use cookies to understand how visitors use our site. This helps us improve content and services.
+      See our <a href="/privacy" class="underline hover:text-white">privacy policy</a>.
+    </p>
+    <div class="flex shrink-0 gap-3">
+      <button
+        id="cookie-decline"
+        class="rounded border border-navy-600 px-4 py-2 text-sm text-slate-400 transition hover:border-slate-400 hover:text-slate-200"
+      >
+        Decline
+      </button>
+      <button
+        id="cookie-accept"
+        class="rounded bg-cyan-500 px-4 py-2 text-sm font-medium text-navy-950 transition hover:bg-cyan-400"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ GA_ID }}>
+  const STORAGE_KEY = 'cookie_consent';
+
+  function loadGA() {
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    };
+  }
+
+  function grantConsent() {
+    if (window.gtag) {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+    loadGA();
+  }
+
+  function hideBanner() {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  const stored = localStorage.getItem(STORAGE_KEY);
+
+  if (stored === 'granted') {
+    grantConsent();
+  } else if (stored === null) {
+    document.getElementById('cookie-banner').style.display = 'block';
+
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+      localStorage.setItem(STORAGE_KEY, 'granted');
+      grantConsent();
+      hideBanner();
+    });
+
+    document.getElementById('cookie-decline').addEventListener('click', () => {
+      localStorage.setItem(STORAGE_KEY, 'denied');
+      hideBanner();
+    });
+  }
+</script>

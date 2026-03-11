@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -53,6 +54,17 @@ const ogImageURL = new URL(ogImage, Astro.site).href;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
     <slot name="head" />
+
+    <!-- GA4 Consent Mode v2: default deny until user accepts -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        wait_for_update: 500,
+      });
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
@@ -60,5 +72,6 @@ const ogImageURL = new URL(ogImage, Astro.site).href;
       <slot />
     </main>
     <Footer />
+    <CookieBanner />
   </body>
 </html>
