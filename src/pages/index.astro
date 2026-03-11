@@ -2,6 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Killawot',
+  url: 'https://killawot.com',
+  description: 'AI automation consultancy providing agent systems, AI audits, full-stack development, and cloud architecture for global brands.',
+  serviceArea: 'Worldwide',
+  knowsAbout: ['AI Automation', 'Full-Stack Development', 'Cloud Architecture', 'AI Audits', 'LLM Integration'],
+};
+
 const services = [
   {
     title: 'Agent & Automation Systems',
@@ -33,6 +43,7 @@ const clients = [
 ---
 
 <BaseLayout title="Killawot — Engineering Intelligent Systems">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
   <!-- Hero -->
   <section class="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950" />
