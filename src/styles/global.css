@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-navy-950: #060a1f;
@@ -32,4 +33,12 @@ body {
 ::selection {
   background-color: var(--color-accent);
   color: var(--color-navy-950);
+}
+
+.prose img {
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: auto;
 }

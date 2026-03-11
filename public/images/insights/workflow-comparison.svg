@@ -1,0 +1,76 @@
+<svg viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" style="font-family: Inter, system-ui, sans-serif;">
+  <rect width="760" height="520" rx="16" fill="#111633"/>
+
+  <!-- Column headers -->
+  <text x="190" y="42" text-anchor="middle" fill="#ef4444" font-size="15" font-weight="700" letter-spacing="1.5">MANUAL</text>
+  <text x="570" y="42" text-anchor="middle" fill="#00b4d8" font-size="15" font-weight="700" letter-spacing="1.5">AI-AUTOMATED</text>
+
+  <line x1="380" y1="16" x2="380" y2="504" stroke="#1e2a50" stroke-width="2"/>
+
+  <!-- Step 1 — shared -->
+  <rect x="50" y="58" width="280" height="52" rx="10" fill="#1a2040" stroke="#2d3a5e" stroke-width="1.5"/>
+  <text x="190" y="89" text-anchor="middle" fill="#cbd5e1" font-size="15">Customer submits form</text>
+
+  <rect x="430" y="58" width="280" height="52" rx="10" fill="#1a2040" stroke="#2d3a5e" stroke-width="1.5"/>
+  <text x="570" y="89" text-anchor="middle" fill="#cbd5e1" font-size="15">Customer submits form</text>
+
+  <!-- Arrows down -->
+  <line x1="190" y1="110" x2="190" y2="132" stroke="#4b5563" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="570" y1="110" x2="570" y2="132" stroke="#00b4d8" stroke-width="2" marker-end="url(#ac)"/>
+
+  <!-- Step 2 -->
+  <rect x="50" y="132" width="280" height="60" rx="10" fill="#1a2040" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6"/>
+  <text x="190" y="158" text-anchor="middle" fill="#fca5a5" font-size="15">Staff review</text>
+  <text x="190" y="180" text-anchor="middle" fill="#6b7280" font-size="13">2–4 hours</text>
+
+  <rect x="430" y="132" width="280" height="60" rx="10" fill="#0a2a3a" stroke="#00b4d8" stroke-width="1.5"/>
+  <text x="570" y="158" text-anchor="middle" fill="#67e8f9" font-size="15">AI classifies &amp; validates</text>
+  <text x="570" y="180" text-anchor="middle" fill="#00b4d8" font-size="13">2 seconds</text>
+
+  <line x1="190" y1="192" x2="190" y2="214" stroke="#4b5563" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="570" y1="192" x2="570" y2="214" stroke="#00b4d8" stroke-width="2" marker-end="url(#ac)"/>
+
+  <!-- Step 3 -->
+  <rect x="50" y="214" width="280" height="60" rx="10" fill="#1a2040" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6"/>
+  <text x="190" y="240" text-anchor="middle" fill="#fca5a5" font-size="15">Manual data entry</text>
+  <text x="190" y="262" text-anchor="middle" fill="#6b7280" font-size="13">30 minutes</text>
+
+  <rect x="430" y="214" width="280" height="60" rx="10" fill="#0a2a3a" stroke="#00b4d8" stroke-width="1.5"/>
+  <text x="570" y="240" text-anchor="middle" fill="#67e8f9" font-size="15">Auto-populate CRM</text>
+  <text x="570" y="262" text-anchor="middle" fill="#00b4d8" font-size="13">5 seconds</text>
+
+  <line x1="190" y1="274" x2="190" y2="296" stroke="#4b5563" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="570" y1="274" x2="570" y2="296" stroke="#00b4d8" stroke-width="2" marker-end="url(#ac)"/>
+
+  <!-- Step 4 -->
+  <rect x="50" y="296" width="280" height="60" rx="10" fill="#1a2040" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6"/>
+  <text x="190" y="322" text-anchor="middle" fill="#fca5a5" font-size="15">Compliance check</text>
+  <text x="190" y="344" text-anchor="middle" fill="#6b7280" font-size="13">1–2 hours</text>
+
+  <rect x="430" y="296" width="280" height="60" rx="10" fill="#0a2a3a" stroke="#00b4d8" stroke-width="1.5"/>
+  <text x="570" y="322" text-anchor="middle" fill="#67e8f9" font-size="15">AI compliance screening</text>
+  <text x="570" y="344" text-anchor="middle" fill="#00b4d8" font-size="13">10 seconds</text>
+
+  <line x1="190" y1="356" x2="190" y2="378" stroke="#4b5563" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="570" y1="356" x2="570" y2="378" stroke="#00b4d8" stroke-width="2" marker-end="url(#ac)"/>
+
+  <!-- Step 5 — result -->
+  <rect x="50" y="378" width="280" height="52" rx="10" fill="#1a2040" stroke="#2d3a5e" stroke-width="1.5"/>
+  <text x="190" y="409" text-anchor="middle" fill="#cbd5e1" font-size="15">Customer onboarded</text>
+
+  <rect x="430" y="378" width="280" height="52" rx="10" fill="#1a2040" stroke="#2d3a5e" stroke-width="1.5"/>
+  <text x="570" y="409" text-anchor="middle" fill="#cbd5e1" font-size="15">Customer onboarded</text>
+
+  <!-- Totals -->
+  <text x="190" y="462" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="700">4–8 hours total</text>
+  <text x="570" y="462" text-anchor="middle" fill="#00b4d8" font-size="16" font-weight="700">Under 1 minute total</text>
+
+  <defs>
+    <marker id="ag" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#4b5563"/>
+    </marker>
+    <marker id="ac" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#00b4d8"/>
+    </marker>
+  </defs>
+</svg>
