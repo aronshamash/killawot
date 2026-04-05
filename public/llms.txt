@@ -1,0 +1,26 @@
+# Killawot
+
+> Engineering Intelligent Systems. AI automation consultancy and full-stack development.
+
+Killawot is a London-based AI automation consultancy with 20+ years of engineering experience. We build agent systems, LLM integrations, and cloud-native applications for global brands including Collinson Group, BBC iPlayer, The Times, and Superdry.
+
+## Services
+
+- [Agent & Automation Systems](/services/) — Custom AI agents, LLM-integrated workflows, RAG pipelines, and multi-agent orchestration.
+- [AI Audits & Readiness Assessment](/services/) — Maturity assessments, risk reviews of existing AI, and exec-ready roadmaps with ROI projections.
+- [Full-Stack Development](/services/) — Production-grade Node.js, React, and API development. 20+ years across major global brands.
+- [Cloud Architecture & Infrastructure](/services/) — AWS-native architecture: serverless, containers, event-driven distributed systems.
+
+## Work
+
+- [Portfolio & Case Studies](/work/) — Selected projects for Collinson Group, BBC iPlayer, The Times, Superdry, and more.
+
+## Insights
+
+- [How AI Automation Can Transform Your Business Operations](/insights/ai-automation-transform-operations/)
+
+## Contact
+
+- [Book a free consultation](/contact/)
+- Phone: +44 (0)7947 408 351
+- Based in the UK, working worldwide
