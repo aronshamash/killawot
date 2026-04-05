@@ -12,6 +12,21 @@ const orgJsonLd = {
   knowsAbout: ['AI Automation', 'Full-Stack Development', 'Cloud Architecture', 'AI Audits', 'LLM Integration'],
 };
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Killawot',
+  url: 'https://killawot.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://killawot.com/?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 const services = [
   {
     title: 'Agent & Automation Systems',
@@ -44,6 +59,7 @@ const clients = [
 
 <BaseLayout title="Killawot — Engineering Intelligent Systems">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
   <!-- Hero -->
   <section class="relative pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950" />

@@ -9,6 +9,14 @@ const posts = (await getCollection('insights')).sort(
 ---
 
 <BaseLayout title="AI Automation Insights & Engineering Guides — Killawot" description="Practical guides on AI automation, engineering best practices, and building intelligent systems for business operations.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://killawot.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://killawot.com/insights/" }
+    ]
+  })} />
   <section class="pt-32 pb-24">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
@@ -16,6 +24,7 @@ const posts = (await getCollection('insights')).sort(
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">AI & Engineering Insights</h1>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
           Practical perspectives on AI automation, engineering best practices, and building intelligent systems.
+          Written by engineers with 20+ years of experience delivering for global brands.
         </p>
       </div>
 
@@ -33,6 +42,24 @@ const posts = (await getCollection('insights')).sort(
       {posts.length === 0 && (
         <p class="text-center text-gray-500">No posts yet. Check back soon.</p>
       )}
+
+      <div class="mt-20 border-t border-white/5 pt-16">
+        <h2 class="text-2xl font-bold text-white text-center mb-10">Topics we cover</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div class="bg-navy-800/50 border border-white/5 rounded-xl p-6">
+            <h3 class="text-white font-semibold mb-2">AI Automation</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Practical approaches to identifying automation opportunities, evaluating LLM fit, and building production-ready agent workflows.</p>
+          </div>
+          <div class="bg-navy-800/50 border border-white/5 rounded-xl p-6">
+            <h3 class="text-white font-semibold mb-2">Engineering Practices</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Patterns, tradeoffs, and lessons from 20+ years delivering full-stack systems — from architecture decisions to production hardening.</p>
+          </div>
+          <div class="bg-navy-800/50 border border-white/5 rounded-xl p-6">
+            <h3 class="text-white font-semibold mb-2">Cloud & Infrastructure</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">AWS architecture, serverless patterns, IaC, and the operational considerations that separate hobby projects from production systems.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

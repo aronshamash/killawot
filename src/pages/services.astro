@@ -60,6 +60,14 @@ const services = [
 <BaseLayout title="AI Automation & Development Services — Killawot" description="AI automation, full-stack development, and cloud architecture services. Built for businesses ready to move fast with 20+ years of engineering experience.">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://killawot.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://killawot.com/services/" }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Killawot Services",
     "url": "https://killawot.com/services/",

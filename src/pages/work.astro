@@ -6,32 +6,40 @@ const projects = [
   {
     name: 'Collinson Group',
     image: '/images/clients/collinson-group.jpg',
-    description: 'Platform modernisation for the group behind Priority Pass — the world\'s largest airport lounge network. Automated infrastructure and delivery pipelines, enabling faster releases and improved platform reliability.',
+    description: 'Platform modernisation for the group behind Priority Pass — the world\'s largest airport lounge network, serving over 25 million members globally. Rebuilt core platform services with event-driven architecture on AWS and automated CI/CD delivery pipelines. Delivered measurable improvements in release velocity and platform reliability across a high-availability system operating at significant scale.',
   },
   {
     name: 'Superdry',
     image: '/images/clients/superdry.png',
-    description: 'Re-platforming and new feature development for the global fashion brand. Full-stack engineering across their e-commerce platform.',
+    description: 'Re-platforming and new feature development for the global fashion retailer operating across 65 countries. Full-stack engineering across their e-commerce platform using Node.js and React, including checkout flow improvements, performance optimisation, and integration work with third-party fulfilment and payments systems.',
   },
   {
     name: 'The Times Newspaper',
     image: '/images/clients/thetimes.jpg',
-    description: 'Software development expertise for one of the world\'s most recognised news publications. Building and maintaining digital publishing tools.',
+    description: 'Software development for one of the world\'s most recognised news publications, with a digital subscriber base in the millions. Built and maintained tooling for the digital publishing workflow, enabling the editorial team to publish high-frequency content reliably across web and app platforms at pace.',
   },
   {
     name: 'BBC iPlayer',
     image: '/images/clients/iplayer.jpg',
-    description: 'Engineering for BBC iPlayer — the UK\'s leading streaming platform. Building high-scale, resilient services powering millions of daily viewers.',
+    description: 'Engineering for BBC iPlayer — the UK\'s leading on-demand streaming platform, serving millions of viewers daily. Built resilient, high-throughput backend services on AWS designed to handle peak demand during major live events and sustained on-demand streaming load without degradation.',
   },
   {
     name: 'Rebecca Shamash',
     image: '/images/clients/rebecca.png',
-    description: 'Design and build of a professional website for a psychotherapist practice in Bristol. Clean, accessible, and optimised for local search.',
+    description: 'Design and build of a professional website for a psychotherapist practice in Bristol. Built with Astro for fast static delivery, with structured local SEO markup, accessible design, and a clean UX focused on building client trust and driving contact enquiries.',
   },
 ];
 ---
 
 <BaseLayout title="Our Work — AI & Engineering Projects — Killawot" description="Case studies from 20+ years engineering for global brands — Collinson Group, BBC iPlayer, The Times, Superdry, and more.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://killawot.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://killawot.com/work/" }
+    ]
+  })} />
   <section class="pt-32 pb-24">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
