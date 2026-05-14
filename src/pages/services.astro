@@ -3,61 +3,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const services = [
   {
-    title: 'Agent & Automation Systems',
-    description: 'We build agents, pipelines, and LLM-integrated workflows that cut manual effort and accelerate delivery. Designed around your stack — not a generic layer dropped on top.',
+    title: 'Embedded AI Engineering',
+    description: 'Senior engineers work inside your team to move AI projects from design to production. Hands-on delivery, not advisory slides.',
     deliverables: [
-      'Workflow analysis and automation opportunity mapping',
-      'LLM integration, prompt engineering, and RAG pipelines',
-      'Custom agent development (single-agent and multi-agent)',
-      'Orchestration, error handling, and observability',
-      'Handover documentation and team enablement',
+      'Claude and LLM integrations',
+      'Agent systems and multi-agent orchestration',
+      'MCP server implementation',
+      'Workflow orchestration and automation',
+      'Enterprise API integration',
+      'Technical leadership and hands-on delivery',
     ],
-    audience: 'Engineering and operations leaders eliminating manual bottlenecks without adding headcount.',
+    audience: 'Engineering teams that need senior AI delivery capacity without the overhead of hiring or onboarding a large agency.',
     icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 2.47a2.25 2.25 0 01-1.591.659H9.061a2.25 2.25 0 01-1.591-.659L5 14.5m14 0V5.846a2.25 2.25 0 00-1.36-2.068l-1.39-.58M5 14.5V5.846a2.25 2.25 0 011.36-2.068l1.39-.58" /></svg>',
   },
   {
-    title: 'AI Audits & Readiness Assessment',
-    description: 'We assess your data maturity, existing AI implementations, and infrastructure — then tell you honestly what\'s working, what\'s not, and what to build first.',
+    title: 'AI Platform Delivery',
+    description: 'Architecture and implementation for organisations building internal AI capabilities. From agent runtime design to production hardening and handover.',
     deliverables: [
-      'Maturity assessment across data, tooling, and team capability',
-      'Risk review of existing AI implementations',
-      'Data quality and pipeline evaluation',
-      'Prioritised opportunity map with effort vs. impact scoring',
-      'Exec-ready report with ROI projections and build roadmap',
+      'Agent runtime architecture',
+      'Tool and data access design',
+      'Auth, permissions and governance',
+      'AWS deployment patterns',
+      'Observability, tracing and monitoring',
+      'Production hardening and handover',
     ],
-    audience: 'Leaders making AI investment decisions, or teams inheriting AI they didn\'t build.',
-    icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
-  },
-  {
-    title: 'Full-Stack Development',
-    description: 'Production-grade applications and APIs built by engineers with 20+ years experience across major global brands. React, Node.js, GraphQL, React Native — end to end.',
-    deliverables: [
-      'Web application development (React, Next.js, Astro)',
-      'API design and implementation (GraphQL, REST)',
-      'Mobile applications (React Native)',
-      'Database design and optimisation (MongoDB, PostgreSQL)',
-      'Performance auditing and optimisation',
-    ],
-    audience: 'Product teams that need senior delivery without the overhead of a large agency.',
-    icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>',
-  },
-  {
-    title: 'Cloud Architecture & Infrastructure',
-    description: 'AWS architecture designed for scale and operational simplicity — from serverless and containers to event-driven distributed systems. Built to last, not just to launch.',
-    deliverables: [
-      'AWS architecture design and implementation',
-      'Serverless and container-based deployments',
-      'CI/CD pipeline setup and optimisation',
-      'Infrastructure as Code (Terraform, CDK)',
-      'Cost analysis, right-sizing, and observability setup',
-    ],
-    audience: 'Engineering teams scaling past their current infrastructure, or moving workloads to the cloud.',
+    audience: 'Platform and infrastructure teams building foundational AI capabilities for internal product and data teams.',
     icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>',
+  },
+  {
+    title: 'AI Architecture Advisory',
+    description: 'Senior technical guidance for organisations that need clarity before or during delivery. Architecture reviews, rescue work and decision support.',
+    deliverables: [
+      'Architecture reviews and design feedback',
+      'AI readiness assessment',
+      'Implementation rescue and recovery',
+      'Roadmap and prioritisation',
+      'Vendor and platform evaluation',
+      'Risk and governance review',
+    ],
+    audience: 'CTOs, engineering directors and programme leads who need independent senior input before committing to a build, or who need to change direction mid-project.',
+    icon: '<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
   },
 ];
 ---
 
-<BaseLayout title="AI Automation & Development Services — Killawot" description="AI automation, full-stack development, and cloud architecture services. Built for businesses ready to move fast with 20+ years of engineering experience.">
+<BaseLayout title="Enterprise AI Engineering Services | Killawot" description="Embedded AI engineering, AI platform delivery and architecture advisory. Senior engineers who ship production AI systems for complex organisations.">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -77,10 +67,10 @@ const services = [
         "position": 1,
         "item": {
           "@type": "Service",
-          "name": "Agent & Automation Systems",
-          "description": "Custom AI agents, LLM-integrated workflows, RAG pipelines, and multi-agent orchestration to cut manual effort and accelerate delivery.",
+          "name": "Embedded AI Engineering",
+          "description": "Senior engineers embedded with your team to move AI projects from design to production, including Claude and LLM integrations, agent systems, MCP server implementation and enterprise API integration.",
           "provider": { "@type": "Organization", "name": "Killawot", "url": "https://killawot.com" },
-          "serviceType": "AI Automation",
+          "serviceType": "Embedded AI Engineering",
           "areaServed": "Worldwide"
         }
       },
@@ -89,10 +79,10 @@ const services = [
         "position": 2,
         "item": {
           "@type": "Service",
-          "name": "AI Audits & Readiness Assessment",
-          "description": "AI maturity assessments, risk reviews of existing implementations, and exec-ready roadmaps with ROI projections.",
+          "name": "AI Platform Delivery",
+          "description": "Architecture and implementation for organisations building internal AI capabilities, including agent runtime architecture, observability, governance and AWS deployment patterns.",
           "provider": { "@type": "Organization", "name": "Killawot", "url": "https://killawot.com" },
-          "serviceType": "AI Consulting",
+          "serviceType": "AI Platform Delivery",
           "areaServed": "Worldwide"
         }
       },
@@ -101,22 +91,10 @@ const services = [
         "position": 3,
         "item": {
           "@type": "Service",
-          "name": "Full-Stack Development",
-          "description": "Production-grade web applications and APIs built with React, Node.js, GraphQL, and React Native by engineers with 20+ years experience.",
+          "name": "AI Architecture Advisory",
+          "description": "Senior technical guidance including architecture reviews, AI readiness assessment, implementation rescue, roadmap prioritisation and risk review.",
           "provider": { "@type": "Organization", "name": "Killawot", "url": "https://killawot.com" },
-          "serviceType": "Software Development",
-          "areaServed": "Worldwide"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "Service",
-          "name": "Cloud Architecture & Infrastructure",
-          "description": "AWS architecture for scale — serverless, containers, event-driven distributed systems, IaC with Terraform and CDK.",
-          "provider": { "@type": "Organization", "name": "Killawot", "url": "https://killawot.com" },
-          "serviceType": "Cloud Architecture",
+          "serviceType": "AI Architecture Advisory",
           "areaServed": "Worldwide"
         }
       }
@@ -126,10 +104,9 @@ const services = [
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">What we offer</p>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">AI Automation & Development Services</h1>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Enterprise AI Engineering Services</h1>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-          We design, build, and ship — across AI systems, full-stack applications,
-          and cloud infrastructure. Senior engineers, every engagement.
+          We design, build and ship production AI systems. Embedded engineering, platform delivery and architecture advisory, with senior engineers on every engagement.
         </p>
       </div>
 
@@ -172,7 +149,7 @@ const services = [
           href="/contact"
           class="inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold rounded-xl transition-colors"
         >
-          Discuss your project
+          Book a technical discovery call
         </a>
       </div>
     </div>

@@ -1,78 +1,84 @@
 ---
-title: "How AI Automation Can Transform Your Business Operations"
-description: "A practical guide to understanding where AI automation delivers real value, how to assess your readiness, and what ROI to expect."
-date: "2026-03-09"
+title: "Shipping Production AI in Enterprise: A Practical Delivery Framework"
+description: "A senior engineering perspective on scoping, prioritising and shipping AI systems in complex organisations, from readiness assessment to production handover."
+date: "2026-05-14"
 author: "Aron Shamash"
 ---
 
-Most businesses know AI is important. Fewer know where to start, what's realistic, and how to measure success. This post cuts through the noise and lays out a practical framework for evaluating and implementing AI automation in your operations.
+Most enterprise AI projects don't fail at proof-of-concept. They fail at production. The model works in the sandbox, the demo lands well, and then six months later the project is stalled — blocked on data access, integration complexity, governance sign-off, or an architecture that was never designed to run at scale.
 
-## The Problem: Manual Processes Don't Scale
+This is a delivery framework. Not a primer on why AI matters. It's a structured approach to scoping, prioritising and shipping AI systems in organisations where "it works in my notebook" is not an acceptable outcome.
 
-Every growing business hits a point where manual processes become the bottleneck. Data entry, report generation, customer routing, content moderation, compliance checks — these tasks consume engineering time and operational bandwidth that could be spent on higher-value work.
+## The Delivery Failure Pattern
 
-The question isn't whether to automate. It's **what to automate first**, and **how to do it without breaking what already works**.
+Technically capable teams still produce failed AI projects. The common failure modes aren't about model quality or prompt engineering. They're delivery failures:
 
-## Manual vs Automated: A Workflow Comparison
+- Systems built in isolation from the integration surface they'll need to serve
+- No baseline measurement, so you can't prove or improve outcomes after launch
+- Governance and compliance requirements discovered late, causing scope rewrites
+- Observability bolted on after the fact, or not at all
+- Handover documentation that doesn't exist, or doesn't reflect what was actually built
 
-The diagram below illustrates a typical customer onboarding workflow — before and after AI automation. The manual version requires human intervention at every stage. The automated version uses AI for classification, validation, and routing, with humans only handling exceptions.
+The fix isn't more tooling. It's structured delivery from the start.
+
+## Mapping Your Integration Surface
+
+Before writing code, map the systems your AI needs to touch. In enterprise environments, this is rarely one data source and one output target. It's CRMs, identity providers, event streams, legacy APIs, content stores and approval workflows, many of which have their own access controls, rate limits and data contracts.
 
 ![Manual vs AI-automated workflow comparison showing time reductions from 4-8 hours to under 1 minute](/images/insights/workflow-comparison.svg)
 
-The difference is stark: what takes a team hours can be reduced to seconds for the majority of cases, with human review reserved for edge cases and exceptions.
+The workflow diagram above illustrates a typical before/after. What it doesn't show is the integration work behind the automated side: auth flows, schema normalisation, error handling, retry logic and the human escalation path for edge cases.
 
-## Assessing Your AI Readiness
+Scoping that surface early determines your delivery timeline, your risk profile and which systems need stakeholder alignment before you start.
 
-Before diving into implementation, you need an honest assessment of where your organisation stands. We use a five-level maturity model to help clients understand their current position and chart a realistic path forward.
+## Assessing Readiness Honestly
+
+We use a five-level maturity model when scoping AI work with engineering teams. Most organisations sit at Level 1 or 2, not because they haven't invested in AI, but because foundational data infrastructure is underdeveloped.
 
 ![AI readiness maturity model showing five levels from Ad-hoc to AI-Native](/images/insights/ai-readiness-model.svg)
 
-Most organisations we work with sit at Level 1 or 2. The good news: you don't need to leap to Level 5. The highest ROI typically comes from the move to Level 3 — getting your data organised and automating your first critical workflows.
+The maturity assessment isn't about gatekeeping. It's about identifying the load-bearing constraints before they surface mid-project. A team at Level 2 can ship production AI, but only if the delivery plan accounts for the gaps. Pretending those gaps don't exist is how you end up rebuilding the data pipeline in week 8 of a 10-week engagement.
 
-## Choosing What to Automate First
+## Sequencing the Work
 
-Not every process is worth automating. The best candidates share a common profile: high volume, rule-based logic, low tolerance for errors, and significant human time cost. The worst candidates tend to be low-frequency, judgement-heavy, or highly contextual — where AI is still unreliable.
-
-Use this two-axis framework to prioritise: **process volume** (how often it runs) against **automation suitability** (how rule-based and data-rich it is).
+Not every AI use case should be built first. The highest-ROI starting points share a common profile: high volume, well-defined logic, good data quality and a clear success metric. These are the cases where you can ship fast, prove value and build the organisational trust needed to tackle harder problems.
 
 ![Process prioritisation matrix with four quadrants: Quick Wins, Worth Investigating, Automate Carefully, Leave for Now](/images/insights/prioritisation-matrix.svg)
 
-The top-right quadrant is where you start. These processes run frequently, follow predictable rules, and will show measurable ROI fastest. Once you have a proven automation track record, you earn the organisational trust to tackle harder quadrants.
+The two-axis matrix above maps process volume against automation suitability. The top-right quadrant is where you start, not because those problems are easy, but because they're well-bounded. Bounded problems ship.
 
-## The ROI of AI Automation
+Low-frequency, high-judgement processes belong in a later phase. Not because AI can't help, but because the risk profile in complex organisations requires a track record before you can get the right stakeholders to commit.
 
-One of the most common questions we hear: "How long before we see a return?" The answer depends on the complexity of implementation, but the pattern is consistent.
+## Delivery Phases That Control Risk
+
+The four-phase delivery model below is designed for organisations where ungated delivery is not an option. Each phase has a defined output and a decision gate before the next begins.
+
+![Implementation roadmap showing four phases: Discovery, Pilot Build, Measure and Iterate, Scale](/images/insights/implementation-roadmap.svg)
+
+Phase 2 is deliberately constrained to a single workflow. The goal is a production system that runs, observes and can be handed over, not a prototype that needs six months of hardening before it's usable. That single-workflow proof is what justifies Phase 4 resource commitment.
+
+Human-in-the-loop checkpoints are designed in from the start. In regulated or high-stakes environments, designing for oversight is a delivery requirement, not an afterthought.
+
+## Measuring Outcomes
+
+Hard measurement is non-negotiable for enterprise AI programmes. Not just because finance wants a number, but because without baselines you can't improve what you've built or justify what comes next.
 
 ![AI automation ROI timeline showing break-even at approximately 4 months with compound savings thereafter](/images/insights/roi-timeline.svg)
 
-For most mid-size implementations, we see break-even at around **3-5 months**, with compound savings accelerating from there. The key insight: AI automation savings grow over time as the system handles more edge cases and your team redirects effort to higher-value work.
+Break-even at 3 to 5 months is achievable when scope is controlled and baselines were measured before delivery started. Organisations that skip baseline measurement almost always struggle to quantify value at the end, and struggle to fund the next phase as a result.
 
-## The Implementation Roadmap
+Track the metrics that matter for your specific workflow: time-to-completion, error rate, human escalation rate, throughput. Pick three. Measure them before you build. Measure them after.
 
-Knowing what to automate is half the battle. Executing it well is the other half. Most failed AI projects don't fail because the technology doesn't work — they fail because scope wasn't controlled, baselines weren't measured, or stakeholder buy-in collapsed mid-project.
+## Starting Well
 
-We follow a four-phase delivery model that controls risk while building momentum:
+If you're scoping AI work in a complex organisation:
 
-![Implementation roadmap showing four phases: Discovery (weeks 1-3), Pilot Build (weeks 4-9), Measure and Iterate (months 3-4), Scale (month 4 onwards)](/images/insights/implementation-roadmap.svg)
+1. **Map your integration surface before scoping the model** — know what systems, auth patterns and data contracts you're working against
+2. **Assess data quality before committing to a timeline** — poor data quality is the single most common delivery delay
+3. **Pick one workflow for the pilot, and make it well-bounded** — scope creep in Phase 1 kills Phase 4
+4. **Design observability in from the start** — you can't debug a production system you can't observe
+5. **Plan the handover before you start building** — documentation and enablement are delivery requirements, not optional extras
 
-Phase 2 is deliberately constrained to a single workflow. This isn't timidity — it's how you generate the measurable evidence needed to justify Phase 4. Organisations that try to automate five workflows simultaneously almost always deliver none of them well.
+## Working With Us
 
-## Where to Start
-
-If you're considering AI automation, here's a practical starting framework:
-
-1. **Audit your highest-volume manual processes** — Look for tasks that are repetitive, rule-based, and currently require human time. These are your quick wins.
-
-2. **Assess your data quality** — AI is only as good as the data it works with. If your data is scattered across spreadsheets and email threads, start there.
-
-3. **Start small, prove value** — Don't try to automate everything at once. Pick one workflow, build it well, measure the results, and use that evidence to fund the next phase.
-
-4. **Keep humans in the loop** — The best AI automation augments human decision-making rather than replacing it. Design for oversight, especially in the early stages.
-
-5. **Measure relentlessly** — Track time saved, error rates, customer satisfaction, and cost reduction. Hard data is what gets the next project funded.
-
-## Next Steps
-
-If you're evaluating where AI automation fits in your organisation, we offer a **free initial consultation** to discuss your specific challenges and opportunities. Whether you need a full readiness audit or just want to explore the possibilities, we're happy to help.
-
-[Get in touch](/contact) to start the conversation.
+Killawot embeds senior engineers with your team to move AI projects from scoping to production. If you're planning an AI delivery programme and want a senior technical perspective on the approach, [book a technical discovery call](/contact).

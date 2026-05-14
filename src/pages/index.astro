@@ -7,9 +7,9 @@ const orgJsonLd = {
   '@type': 'Organization',
   name: 'Killawot',
   url: 'https://killawot.com',
-  description: 'AI automation consultancy providing agent systems, AI audits, full-stack development, and cloud architecture for global brands.',
+  description: 'Embedded AI engineering consultancy delivering production AI systems, agent architecture, MCP integrations and enterprise APIs for complex organisations.',
   serviceArea: 'Worldwide',
-  knowsAbout: ['AI Automation', 'Full-Stack Development', 'Cloud Architecture', 'AI Audits', 'LLM Integration'],
+  knowsAbout: ['Embedded AI Engineering', 'Agent Systems', 'MCP Integrations', 'Enterprise API Integration', 'LLM Integration', 'Observability', 'AWS Architecture', 'AI Governance'],
 };
 
 const websiteJsonLd = {
@@ -29,24 +29,19 @@ const websiteJsonLd = {
 
 const services = [
   {
-    title: 'Agent & Automation Systems',
-    description: 'Streamline operations with intelligent workflow automation, LLM integration, and custom agent systems that reduce manual effort and accelerate delivery.',
+    title: 'Embedded AI Engineering',
+    description: 'Senior engineers embedded with your team to move AI projects from design to production. Hands-on delivery, not advisory slides.',
     icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-2.47 2.47a2.25 2.25 0 01-1.591.659H9.061a2.25 2.25 0 01-1.591-.659L5 14.5m14 0V5.846a2.25 2.25 0 00-1.36-2.068l-1.39-.58M5 14.5V5.846a2.25 2.25 0 011.36-2.068l1.39-.58" /></svg>',
   },
   {
-    title: 'AI Audits',
-    description: 'Evaluate your AI readiness, review existing implementations for effectiveness and risk, and get a clear roadmap to intelligent operations.',
-    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
-  },
-  {
-    title: 'Full-Stack Development',
-    description: 'Production-grade applications built with Node.js, React, and cloud-native architecture. Over 20 years of experience with major global brands.',
-    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>',
-  },
-  {
-    title: 'Cloud Architecture',
-    description: 'Scalable infrastructure on AWS. From serverless functions to distributed systems, designed for reliability and cost efficiency.',
+    title: 'AI Platform Delivery',
+    description: 'Architecture and implementation for teams building internal AI capabilities, including agent runtimes, observability, governance and AWS deployment.',
     icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>',
+  },
+  {
+    title: 'AI Architecture Advisory',
+    description: 'Senior technical guidance for organisations that need clarity before or during delivery. Architecture reviews, rescue work and decision support.',
+    icon: '<svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
   },
 ];
 
@@ -57,7 +52,7 @@ const clients = [
 ];
 ---
 
-<BaseLayout title="Killawot — Engineering Intelligent Systems">
+<BaseLayout title="Killawot | Embedded AI Engineering for Enterprise Delivery">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
   <!-- Hero -->
@@ -70,31 +65,29 @@ const clients = [
 
     <div class="relative max-w-6xl mx-auto px-6 text-center">
       <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-6">
-        AI Automation &amp; Consultancy
+        Enterprise AI Engineering
       </p>
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-        Engineering<br />
+        Embedded AI engineering<br />
         <span class="bg-gradient-to-r from-accent to-cyan-400 bg-clip-text text-transparent">
-          Intelligent Systems
+          for enterprise delivery
         </span>
       </h1>
       <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-        We help businesses harness AI automation to streamline operations,
-        reduce costs, and build competitive advantage. Over 20 years of
-        engineering experience with global brands.
+        Killawot helps organisations design, build and ship production AI systems, from agent architecture and MCP integrations to enterprise APIs, observability and handover.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/contact"
           class="inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold rounded-xl transition-colors"
         >
-          Book a free consultation
+          Discuss an AI delivery project
         </a>
         <a
-          href="/services"
+          href="/work"
           class="inline-flex items-center justify-center px-8 py-3.5 border border-white/10 text-white hover:border-accent/50 rounded-xl transition-colors"
         >
-          Our services
+          View our work
         </a>
       </div>
     </div>
@@ -107,7 +100,7 @@ const clients = [
         <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">What we do</p>
         <h2 class="text-3xl md:text-4xl font-bold text-white">Services</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map((service) => (
           <ServiceCard {...service} />
         ))}
@@ -120,18 +113,48 @@ const clients = [
     </div>
   </section>
 
+  <!-- Credibility -->
+  <section class="py-24 bg-navy-900 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-3">Why teams choose Killawot</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Built for real enterprise complexity</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          We bring senior engineering depth to AI delivery, not prototypes, but production systems designed for real organisational constraints.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10">
+        {[
+          'Production APIs and enterprise integration platforms',
+          'AWS cloud infrastructure and event-driven systems',
+          'Identity, access control and governance',
+          'Observability, tracing and monitoring',
+          'Human-in-the-loop workflows',
+          'Handover documentation and team enablement',
+        ].map((item) => (
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-300 text-sm">{item}</span>
+          </div>
+        ))}
+      </div>
+      <div class="max-w-2xl mx-auto pt-8 border-t border-white/10">
+        <p class="text-gray-400 text-sm text-center leading-relaxed">
+          We work with modern AI ecosystems including Claude, MCP, AWS and enterprise integration platforms. Killawot is working toward formal accreditation in the Anthropic ecosystem.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Trusted By -->
-  <section class="py-24 bg-navy-900/30">
+  <section class="py-24 bg-navy-950">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="text-gray-300 text-base font-semibold uppercase tracking-widest mb-10">Trusted by leading brands</p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest mb-10">Engineering for global organisations</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
         {clients.map((client) => (
-          <img
-            src={client.logo}
-            alt={client.name}
-            class="w-full h-auto block"
-            loading="lazy"
-          />
+          <span class="text-gray-300 text-xl font-semibold tracking-tight">{client.name}</span>
         ))}
       </div>
       <div class="mt-10">
@@ -149,17 +172,16 @@ const clients = [
     </div>
     <div class="relative max-w-3xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-        Ready to automate intelligently?
+        Ready to ship production AI?
       </h2>
       <p class="text-gray-400 text-lg mb-10">
-        Whether you need an AI readiness audit, workflow automation, or a full-stack build,
-        we'll help you move fast with confidence.
+        Whether you need embedded engineers, platform architecture, or a senior technical review, we help you move from design to delivery with confidence.
       </p>
       <a
         href="/contact"
         class="inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold rounded-xl transition-colors"
       >
-        Get in touch
+        Book a technical discovery call
       </a>
     </div>
   </section>
