@@ -1,0 +1,32 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="font-family: Inter, system-ui, sans-serif;">
+  <rect width="760" height="300" rx="16" fill="#111633"/>
+
+  <text x="380" y="40" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700">CAMEL RACING FUN FACTS</text>
+
+  <!-- Card 1: Top speed -->
+  <rect x="32" y="70" width="164" height="180" rx="12" fill="#1a2147" stroke="#2d3a5e" stroke-width="1"/>
+  <text x="114" y="140" text-anchor="middle" fill="#22d3ee" font-size="30" font-weight="700">40mph</text>
+  <text x="114" y="168" text-anchor="middle" fill="#9ca3af" font-size="12">Top sprint speed</text>
+  <text x="114" y="186" text-anchor="middle" fill="#6b7280" font-size="12">(65 km/h)</text>
+
+  <!-- Card 2: Robot jockeys -->
+  <rect x="212" y="70" width="164" height="180" rx="12" fill="#1a2147" stroke="#2d3a5e" stroke-width="1"/>
+  <circle cx="294" cy="120" r="16" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+  <rect x="284" y="136" width="20" height="24" rx="4" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+  <text x="294" y="188" text-anchor="middle" fill="#9ca3af" font-size="12">Robot jockeys</text>
+  <text x="294" y="206" text-anchor="middle" fill="#6b7280" font-size="12">ride instead of kids</text>
+
+  <!-- Card 3: Race length -->
+  <rect x="392" y="70" width="164" height="180" rx="12" fill="#1a2147" stroke="#2d3a5e" stroke-width="1"/>
+  <text x="474" y="140" text-anchor="middle" fill="#22d3ee" font-size="30" font-weight="700">8km</text>
+  <text x="474" y="168" text-anchor="middle" fill="#9ca3af" font-size="12">Typical race length</text>
+  <text x="474" y="186" text-anchor="middle" fill="#6b7280" font-size="12">much longer than horses</text>
+
+  <!-- Card 4: Countries -->
+  <rect x="572" y="70" width="156" height="180" rx="12" fill="#1a2147" stroke="#2d3a5e" stroke-width="1"/>
+  <text x="650" y="140" text-anchor="middle" fill="#22d3ee" font-size="30" font-weight="700">4+</text>
+  <text x="650" y="168" text-anchor="middle" fill="#9ca3af" font-size="12">Countries that race</text>
+  <text x="650" y="186" text-anchor="middle" fill="#6b7280" font-size="12">UAE, KSA, Qatar, Australia</text>
+
+  <text x="380" y="278" text-anchor="middle" fill="#6b7280" font-size="13">Racing camels have run for thousands of years across desert tracks.</text>
+</svg>
