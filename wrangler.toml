@@ -5,3 +5,10 @@ compatibility_date = "2024-12-01"
 # [[kv_namespaces]]
 # binding = "CONTACT_SUBMISSIONS"
 # id = "your-kv-namespace-id"
+
+# Newsletter signup capture (KIL-184). Create the namespace with:
+#   wrangler kv namespace create NEWSLETTER_SUBSCRIBERS
+# then replace the id below with the one it prints.
+[[kv_namespaces]]
+binding = "NEWSLETTER_SUBSCRIBERS"
+id = "REPLACE_WITH_REAL_KV_NAMESPACE_ID"
