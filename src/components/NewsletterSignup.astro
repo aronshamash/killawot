@@ -1,0 +1,88 @@
+---
+---
+
+<div class="newsletter-signup">
+  <h4 class="text-white font-semibold text-sm mb-4">Stay updated</h4>
+  <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+    Occasional updates on AI automation and what we're building. No spam.
+  </p>
+  <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2" novalidate>
+    <label for="newsletter-email" class="sr-only">Email address</label>
+    <input
+      type="email"
+      id="newsletter-email"
+      name="email"
+      required
+      placeholder="you@company.com"
+      class="flex-1 px-4 py-2.5 bg-navy-800 border border-white/10 rounded-xl text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors"
+    />
+
+    <!-- Honeypot field — hidden from real users via CSS, bots that autofill it get silently rejected server-side -->
+    <div class="honeypot-field" aria-hidden="true">
+      <label for="newsletter-website">Website</label>
+      <input type="text" id="newsletter-website" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button
+      type="submit"
+      class="px-5 py-2.5 bg-accent hover:bg-accent-light text-navy-950 font-semibold text-sm rounded-xl transition-colors whitespace-nowrap"
+    >
+      Subscribe
+    </button>
+  </form>
+  <div id="newsletter-status" class="hidden mt-3 text-xs"></div>
+</div>
+
+<style>
+  .honeypot-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const form = document.getElementById('newsletter-form') as HTMLFormElement;
+  const status = document.getElementById('newsletter-status') as HTMLDivElement;
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Subscribing...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok) {
+        status.className = 'mt-3 text-xs text-green-400';
+        status.textContent = result.alreadySubscribed
+          ? "You're already subscribed."
+          : 'Thanks for subscribing.';
+        form.reset();
+      } else {
+        status.className = 'mt-3 text-xs text-red-400';
+        status.textContent = result.error || 'Something went wrong. Please try again.';
+      }
+    } catch {
+      status.className = 'mt-3 text-xs text-red-400';
+      status.textContent = 'Something went wrong. Please try again.';
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+      status.classList.remove('hidden');
+    }
+  });
+</script>
